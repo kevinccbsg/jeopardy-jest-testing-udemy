@@ -2,8 +2,6 @@ import reducer, { initalState } from './index';
 import * as actions from './../actions/index';
 import { category, categories } from '../data/fixtures';
 
-console.log(initalState);
-
 describe('reducer', () => {
   it('returns initial state', () => {
     expect(reducer(initalState, {})).toEqual(initalState);
