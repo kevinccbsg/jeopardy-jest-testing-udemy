@@ -2,3 +2,25 @@ body {
   padding: 5%;
   text-align: center;
 }
+
+.clue {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.clue .answer {
+  transition: all .2s linear;
+}
+
+.text-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text-revealed {
+  visibility: visible;
+  opacity: 1;
+}
