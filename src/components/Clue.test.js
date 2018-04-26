@@ -28,4 +28,18 @@ describe('Clue', () => {
   it('reveal state false', () => {
     expect(clue.state().showed).toBe(false);
   });
+
+  describe('clicking on clue compoennt', () => {
+    beforeEach(() => {
+      clue.find('div.clue').simulate('click');
+    })
+
+    it('sets with text-revealed class', () => {
+      expect(clue.find('h5').at(1).hasClass('text-revealed')).toBe(true);
+    });
+
+    it('reveal state true', () => {
+      expect(clue.state().showed).toBe(true);
+    });
+  });
 });
