@@ -1,10 +1,11 @@
 import { SET_CATEGORIES, PICK_CATEGORY } from '../actions';
 
-const initialState = {
+export const initalState = {
+  category: {},
   categories: [],
 };
 
-const reducer = (state = { ...initialState }, action) => {
+const reducer = (state = { ...initalState }, action) => {
   switch (action.type) {
     case PICK_CATEGORY: {
       return { ...state, category: action.category };
