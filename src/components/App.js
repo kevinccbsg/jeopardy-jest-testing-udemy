@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
-import { setCategories } from '../actions';
+import { setCategories, pickCategory } from '../actions';
 
 class App extends Component {
 
@@ -21,7 +21,11 @@ class App extends Component {
       <div>
         <h2>Jeopardy!</h2>
         {categories.map(category => (
-          <Link key={category.id} to="/category">
+          <Link
+            key={category.id}
+            to="/category"
+            onClick={() => this.props.pickCategory(category)}
+          >
             <h4>{category.title}</h4>
           </Link>
         ))}
@@ -38,6 +42,7 @@ const mapStateToProps = (state) => (
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     setCategories,
+    pickCategory,
   }, dispatch);
 };
 
