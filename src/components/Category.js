@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Clue from './Clue';
 
-class LinkCategoryComponent extends Component {
+export class LinkCategoryComponent extends Component {
   render () {
     return (
       <div>

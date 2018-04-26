@@ -5,6 +5,12 @@ export const clue = {
   value: 'test value',
 };
 
+export const clues = [
+  { ...clue, id: 0 },
+  { ...clue, id: 1 },
+  { ...clue, id: 2 },
+];
+
 export const category = {
   title: 'test category',
 };
